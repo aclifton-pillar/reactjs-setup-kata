@@ -46,7 +46,11 @@ yarn add -D enzyme-adapter-react-16"
 ```
 
 create-react-app comes with some default Jest stuff but you'll probably want to do your own
-so you can do Enzyme.  You'll want to add a jestsetup.js file somewhere that looks like this:
+so you can do Enzyme.  
+
+[Setup React with Enzyme](https://airbnb.io/enzyme/docs/installation/)
+
+You'll want to add a jestsetup.js file somewhere that looks like this:
 
 ```
 import { configure } from 'enzyme';
