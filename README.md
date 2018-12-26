@@ -2,41 +2,45 @@
 
 This kata will build your skill with the following in the ReactJS framework:
 
-* Toolchain Installation and Use
-* Creating Views
-* Unit Test Driven Development
+* Toolchain installation and use including Yarn and Jest
+* Creating a new ReactJS app
+* Configuring the app for testing with Jest and Enzyme
+* Unit Test Driven Development with Jest and Enzyme
 
 ## Instructions
 
-When you complete this kata, you will have completed the following:
+When you complete this kata, you will know how to do the following:
 
 * Set up your development environment
 * Create a new ReactJS project
-* Test drive some portion of Fizzbuzz logic using unit tests using Jest and Enzyme
+* Test drive Fizzbuzz logic using unit tests using Jest and Enzyme
 
-### Development Environment
+You should be able to complete the kata from scratch, without Googling, in thirty
+minutes or less.
+
+### Setup Development Toolchain
 [Install Homebrew](https://brew.sh/)
 
 [Install Node.js with NVM](https://gist.github.com/d2s/372b5943bce17b964a79)
 
 [Install yarn package management etc](https://yarnpkg.com/lang/en/docs/install/#mac-stable)
 
-### React Project Setup
+### Create new ReactJS app
 You can use npx which comes with npm, npm, or yarn to create a reactjs app.  The yarn method words 
 perfectly fine.
+
 [Brief React Installation Instructions](https://facebook.github.io/create-react-app/docs/getting-started)
 
-### Unit Testing with Jest
-[Testing React with Jest](https://facebook.github.io/jest/docs/en/tutorial-react.html)
+* yarn create react-app reactjs-setup-kata
+* cd reactjs-setup-kata/
+* yarn eject
 
-Note that, out of the box, yarn+watchman will watch for changes to your project and re-run
-tests around changed code.  You can also instruct it to re-run all tests by type 'a' in
-the terminal window where you ran 'yarn test.'
+For this app, you can do all your work App.js.  It will be your single view in the app.
 
-Also note that you will probably have to do 'npm run eject' to do custom configurations
-of Jest, such as specifying a setup file to be run before tests.  It's not scary, though.
-Just make sure to do a 'yarn install' afterward so it'll install the millions of 
-dependencies you were getting for free before.
+Notice that it is a class that extends Component and, like every Component, it has a render
+method.  You can add other methods to it to retrieve data, do calculations, etc.
+
+### Configurating for Unit Testing with Jest and Enzyme
 
 To add Enzyme:
 
@@ -69,16 +73,54 @@ You'll have to modify the jest setup in package.json so it can find the setup fi
     ],
 ```
 
-### Creating your ReactJS app
-* yarn create react-app reactjs-setup-kata
-* cd reactjs-setup-kata/
-* yarn eject
+### Unit Testing with Jest
+[Testing React with Jest](https://facebook.github.io/jest/docs/en/tutorial-react.html)
 
-### Working with a View
-For this app, you can do all your work App.js.  It will be your single view in the app.
+Note that, out of the box, yarn+watchman will watch for changes to your project and re-run
+tests around changed code.  You can also instruct it to re-run all tests by type 'a' in
+the terminal window where you ran 'yarn test.'
 
-Notice that it is a class that extends Component and, like every Component, it has a render
-method.  You can add other methods to it to retrieve data, do calculations, etc.
+Also note that you will probably have to do 'npm run eject' to do custom configurations
+of Jest, such as specifying a setup file to be run before tests.  It's not scary, though.
+Just make sure to do a 'yarn install' afterward so it'll install the millions of 
+dependencies you were getting for free before.
+
+### Gherkins
+
+* Given a user is on the Fizzbuzz form
+* When she enters any number into an input box
+* AND clicks the submit button
+* Then the number is displayed
+
+* Given a user is on the Fizzbuzz form
+* When she enters 3 into an input box
+* AND clicks the submit button
+* Then the word Fizz is displayed
+
+* Given a user is on the Fizzbuzz form
+* When she enters 5 into an input box
+* AND clicks the submit button
+* The word Buzz is displayed
+
+* Given a user is on the Fizzbuzz form
+* When she enters the number that is a multiple of 3 into an input box
+* AND clicks the submit button
+* The word Fizz is displayed
+
+* Given a user is on the Fizzbuzz form
+* When she enters the number that is a multiple of 5 into an input box
+* AND clicks the submit button
+* The word Buzz is displayed
+
+* Given a user is on the Fizzbuzz form
+* When she enters the number 15 into an input box
+* AND clicks the submit button
+* The word Fizzbuzz is displayed
+
+* Given a user is on the Fizzbuzz form
+* When she enters the number that is a multiple of 15 into an input box
+* AND clicks the submit button
+* The word Fizzbuzz is displayed
 
 ### The Magical Wonder of FizzBuzz
 FizzBuzz is a deceptively simple programming problem used by countless
