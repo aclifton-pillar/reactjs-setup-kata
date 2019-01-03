@@ -15,8 +15,8 @@ When you complete this kata, you will know how to do the following:
 * Create a new ReactJS project
 * Test drive Fizzbuzz logic using unit tests using Jest and Enzyme
 
-You should be able to complete the kata from scratch, without Googling, in thirty
-minutes or less.
+You should be able to complete the kata from scratch, without Googling, in
+forty five minutes or less.
 
 ### Setup Development Toolchain
 [Install Homebrew](https://brew.sh/)
