@@ -26,7 +26,7 @@ forty five minutes or less.
 [Install yarn package management etc](https://yarnpkg.com/lang/en/docs/install/#mac-stable)
 
 ### Create new ReactJS app
-You can use npx which comes with npm, npm, or yarn to create a reactjs app.  The yarn method words 
+You can use npx which comes with npm, npm, or yarn to create a reactjs app.  The yarn method works 
 perfectly fine.
 
 [Brief React Installation Instructions](https://facebook.github.io/create-react-app/docs/getting-started)
@@ -34,6 +34,9 @@ perfectly fine.
 * yarn create react-app reactjs-setup-kata
 * cd reactjs-setup-kata/
 * yarn eject
+
+If at this point you run your tests with ```yarn test``` and you get a babel error, 
+delete your node_modules and run ```yarn install```.
 
 For this app, you can do all your work App.js.  It will be your single view in the app.
 
