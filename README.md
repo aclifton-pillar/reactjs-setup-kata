@@ -33,10 +33,6 @@ perfectly fine.
 
 * yarn create react-app reactjs-setup-kata
 * cd reactjs-setup-kata/
-* yarn eject
-
-If at this point you run your tests with ```yarn test``` and you get a babel error, 
-delete your node_modules and run ```yarn install```.
 
 For this app, you can do all your work App.js.  It will be your single view in the app.
 
@@ -49,31 +45,18 @@ To add Enzyme:
 
 ```
 yarn add -D enzyme
-yarn add -D enzyme-adapter-react-16"
+yarn add -D enzyme-adapter-react-16
 ```
 
-create-react-app comes with some default Jest stuff but you'll probably want to do your own
+create-react-app comes with some default Jest stuff but you'll need a little more setup
 so you can do Enzyme.  
 
-[Setup React with Enzyme](https://airbnb.io/enzyme/docs/installation/)
-
-You'll want to add a jestsetup.js file somewhere that looks like this:
+Add a file at `src/setupTests.js` that looks like this:
 
 ```
 import { configure } from 'enzyme';
 import Adapter from 'enzyme-adapter-react-16';   
 configure({ adapter: new Adapter() });
-```
-
-You'll have to modify the jest setup in package.json so it can find the setup file:
-
-```
-"jest": {
-    ...
-    "setupFiles": [
-      "react-app-polyfill/jsdom",
-      "<rootDir>/test/jestsetup.js"
-    ],
 ```
 
 ### Unit Testing with Jest
@@ -82,11 +65,6 @@ You'll have to modify the jest setup in package.json so it can find the setup fi
 Note that, out of the box, yarn+watchman will watch for changes to your project and re-run
 tests around changed code.  You can also instruct it to re-run all tests by type 'a' in
 the terminal window where you ran 'yarn test.'
-
-Also note that you will probably have to do 'npm run eject' to do custom configurations
-of Jest, such as specifying a setup file to be run before tests.  It's not scary, though.
-Just make sure to do a 'yarn install' afterward so it'll install the millions of 
-dependencies you were getting for free before.
 
 ### Gherkins
 
