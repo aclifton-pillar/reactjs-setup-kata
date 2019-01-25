@@ -49,7 +49,7 @@ To add Enzyme:
 
 ```
 yarn add -D enzyme
-yarn add -D enzyme-adapter-react-16"
+yarn add -D enzyme-adapter-react-16
 ```
 
 create-react-app comes with some default Jest stuff but you'll probably want to do your own
